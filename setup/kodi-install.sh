@@ -102,6 +102,9 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y lightdm &>/dev/null
 echo "/usr/sbin/lightdm" > /etc/X11/default-display-manager
 msg_ok "Installed lightdm"
 
+msg_info "Adding custom kodi repository"
+add-apt-repository ppa:ubuntuhandbook1/kodi
+
 msg_info "Installing kodi"
 apt-get update &>/dev/null
 apt-get install -y kodi &>/dev/null
